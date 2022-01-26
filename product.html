@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Me.My Bookstore</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 40px;
+  text-align: center;
+  background: url(me.my.png)no-repeat center ; 
+  background-color: #173a57;
+  height: 240px;
+  width:auto;
+  color: white;
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+  font-size: 40px;
+}
+
+/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+.navbar {
+  overflow: hidden;
+  background-color: #173a57;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Active/current link */
+.navbar a.active {
+  background-color: #666;
+  color: white;
+}
+
+/* Column container */
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  -ms-flex: 30%; /* IE10 */
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {   
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+ 
+/* Footer */
+.footer {
+  padding-top: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+  
+ 
+</style>
+</head>
+<body>
+
+<div class="header" alt="the header"></div>
+
+<div class="navbar">
+   <a href="index.html">Home</a>
+  <a href="product.html" class="active">Product</a>
+  <a href="promotion.html">Promotion</a>
+  <a href="company.html">Company</a>
+  <a href="staff.html">Staff</a>
+</div>
+
+  <div class="main">
+    <h2>Welcome to Me.My Bookstore</h2>
+    <h3>e-book In Collection</h3>
+    <img src="book1.jpg" width="auto" height="300px">
+    <h2 style="color:blue">Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones</h2>
+    <p>No matter your goals, Atomic Habits offers a proven framework for improving--every day. James Clear, one of the world's leading experts on habit formation, reveals practical strategies that will teach you exactly how to form good habits, break bad ones, and master the tiny behaviors that lead to remarkable results<a href="Atomic Habits.html" style="text-decoration: none">...read more<a></p>
+    <br>
+	<img src="book2.jpg" width="auto" height="300px">
+    <h2 style="color:blue">Mindset: Changing The Way You Think To Fulfill Your Potential</h2>
+    <p>No matter your goals, Atomic Habits offers a proven framework for improving--every day. James Clear, one of the world's leading experts on habit formation, reveals practical strategies that will teach you exactly how to form good habits, break bad ones, and master the tiny behaviors that lead to remarkable results<a href="Mindset.html" style="text-decoration: none">...read more<a></p>
+     <br>
+	<img src="book3.jpg" width="auto" height="300px">
+    <h2 style="color:blue">The Power of Now: A Guide to Spiritual Enlightenment</h2>
+    <p>To make the journey into the Now we will need to leave our analytical mind and its false created self, the ego, behind<a href="powerofnow.html" style="text-decoration: none">...read more<a></p>
+	 <br>
+	<img src="book4.png" width="auto" height="300px">
+    <h2 style="color:blue">The 5 AM Club</h2>
+    <p>Legendary leadership and elite performance expert Robin Sharma introduced The 5am Club concept over twenty years ago, based on a revolutionary morning routine that has helped his clients maximize their productivity<a href="the5amclub.html" style="text-decoration: none">...read more<a></p>
+	 <br>
+	<img src="book5.jpg" width="auto" height="300px">
+    <h2 style="color:blue">The 7 Habits of Highly Effective People: Powerful Lessons in Personal Change and Habits</h2>
+    <p>What are the habits of successful people?<a href="7highly.html" style="text-decoration: none">...read more<a></p>
+  </div>
+  
+<div class="footer">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127596.38091072587!2d102.90160543768697!3d2.0003815565704395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d04f46a4a97045%3A0x89b7f085922880ed!2sSri%20Medan%2C%2083000%20Batu%20Pahat%2C%20Johor!5e0!3m2!1sen!2smy!4v1642865317477!5m2!1sen!2smy" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  <footer>&copy; Copyright me.my<sup>TM</sup></footer>
+</div>
+
+</body>
+</html>

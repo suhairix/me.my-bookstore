@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Me.My Bookstore</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 40px;
+  text-align: center;
+  background: url(me.my.png)no-repeat center ; 
+  background-color: #173a57;
+  height: 240px;
+  width:auto;
+  color: white;
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+  font-size: 40px;
+}
+
+/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+.navbar {
+  overflow: hidden;
+  background-color: #173a57;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Active/current link */
+.navbar a.active {
+  background-color: #666;
+  color: white;
+}
+
+/* Column container */
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  -ms-flex: 30%; /* IE10 */
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {   
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+ 
+ .myprofile {
+  width: 80%;
+  padding: 20px;
+  }
+ 
+
+/* Footer */
+.footer {
+  text-align: center;
+  background: #ddd;
+  padding-top:20px;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+  
+.showSlide {  
+     display: none  
+ }  
+.showSlide img {  
+     width: 100%;  
+ }  
+.slidercontainer {  
+    max-width: 1000px;  
+    position: relative;  
+     margin: auto;  
+        }  
+.left,.right {  
+    cursor: pointer;  
+     position: absolute;  
+     top: 50%;  
+      width: auto;  
+     padding: 16px;  
+     margin-top: -22px;  
+     color: white;  
+     font-weight: bold;  
+     font-size: 18px;  
+     transition: 0.6s ease;  
+    border-radius: 0 3px 3px 0;  
+        }  
+
+.left:hover, .right:hover {  
+      background-color: rgba(115, 115, 115, 0.8);  
+            }  
+.content {  
+     color: #eff5d4;  
+     font-size: 30px;  
+     padding: 8px 12px;  
+      position: absolute;  
+     top: 10px;  
+    width: 100%;  
+     text-align: center;  
+        }  
+ .active {  
+    background-color: #717171;  
+        }  
+/* Fading animation */  
+.fade {  
+    -webkit-animation-name: fade;  
+     -webkit-animation-duration: 1.5s;  
+     animation-name: fade;  
+     animation-duration: 1.5s;  
+        }  
+@-webkit-keyframes fade {  
+     from {  
+    opacity: .4  
+     }  
+     to {  
+     opacity: 1  
+     }  
+}  
+  
+ @keyframes fade {  
+    from {  
+    opacity: .4  
+     }  
+    to {  
+     opacity: 1  
+     }  
+}  
+
+</style>
+</head>
+<body>
+
+<div class="header" alt="the header"></div>
+
+<div class="navbar">
+  <a href="#" class="active">Home</a>
+  <a href="product.html">Product</a>
+  <a href="promotion.html">Promotion</a>
+  <a href="company.html">Company</a>
+  <a href="staff.html">Staff</a>
+</div>
+
+<div class="row">
+  <div class="side">
+   <!--Audio section-->
+   <table width="auto" border="0">
+  <tr>
+    <td style="background-color: #7f5a83;background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);padding:10px;color:white;border-radius: 25px;">Song:<br>Stayin' Alive
+<br>Bee Gees</td>
+  </tr>
+  <tr>
+    <td><button onclick="playAudio()" type="button">PLAY &nbsp;&nbsp </button><button onclick="pauseAudio()" type="button">PAUSE</button></td>
+  </tr>
+ 
+</table>
+
+  <!--audio section end-->
+    <h2 style="padding-left:30px">About Company</h2>
+    <a><img class="myprofile" src="man-in-suit.jpg"></a>
+    <p>Our company had been selling e-books since 2020. At first I start collecting e-book as hobby but at 2017 I decided to setup an online website to <br> sell e-book that I collected</p>
+    <h3>Highlighted Book</h3>
+	
+    <div class="slidercontainer">  
+        <div class="showSlide fade">  
+            <a href="the5amclub.html"><img src="book4.png" width="auto" height="300px"><a>  
+            <div class="content">The 5 AM Club</div>  
+        </div>   
+        <div class="showSlide fade">  
+            <a href="7highly.html"><img src="book5.jpg" width="auto" height="300px"></a>  
+            <div class="content">The 7 Habits of Highly Effective People</div>  
+        </div>  
+  
+        <div class="showSlide fade">  
+            <a href="powerofnow.html"><img src="book3.jpg" width="auto" height="300px"></a>
+            <div class="content">The Power of Now</div>  
+        </div>  
+         <!-- Navigation arrows -->  
+        <button class="left" onclick="nextSlide(-1)">Previous</button>
+        <button class="right" onclick="nextSlide(1)">Next</button>  
+    </div>  
+
+  </div>
+  <div class="main">
+    <h2>Welcome to Me.My Bookstore</h2>
+    <h3>Latest e-book In Collection</h3>
+    <img src="book1.jpg" width="auto" height="300px">
+    <h2 style="color:blue">Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones</h2>
+    <p>No matter your goals, Atomic Habits offers a proven framework for improving--every day. James Clear, one of the world's leading experts on habit formation, reveals practical strategies that will teach you exactly how to form good habits, break bad ones, and master the tiny behaviors that lead to remarkable results<a href="Atomic Habits.html" style="text-decoration: none">...read more<a></p>
+    <br>
+	<img src="book2.jpg" width="auto" height="300px">
+    <h2 style="color:blue">Mindset: Changing The Way You Think To Fulfill Your Potential</h2>
+    <p>World-renowned Stanford University psychologist Carol Dweck, in decades of research on achievement and success, has discovered a truly groundbreaking idea-the power of our mindset.<a href="Mindset.html" style="text-decoration: none">...read more<a></p>
+    
+  </div>
+</div>
+
+<audio id="myAudio">
+  <source src="Stayin Alive.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<div class="footer">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127596.38091072587!2d102.90160543768697!3d2.0003815565704395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d04f46a4a97045%3A0x89b7f085922880ed!2sSri%20Medan%2C%2083000%20Batu%20Pahat%2C%20Johor!5e0!3m2!1sen!2smy!4v1642865317477!5m2!1sen!2smy" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  <footer>&copy; Copyright me.my<sup>TM</sup></footer>
+
+</div>
+
+<script type="text/javascript">  
+        var slide_index = 1;  
+        displaySlides(slide_index);  
+        function nextSlide(n) {  
+            displaySlides(slide_index += n);  
+        }  
+        function currentSlide(n) {  
+            displaySlides(slide_index = n);  
+        }  
+        function displaySlides(n) {  
+            var i;  
+            var slides = document.getElementsByClassName("showSlide");  
+            if (n > slides.length) { slide_index = 1 }  
+            if (n < 1) { slide_index = slides.length }  
+            for (i = 0; i < slides.length; i++) {  
+                slides[i].style.display = "none";  
+            }  
+            slides[slide_index - 1].style.display = "block";  
+        }  
+		
+		var x = document.getElementById("myAudio"); 
+
+function playAudio() { 
+  x.play(); 
+} 
+
+function pauseAudio() { 
+  x.pause(); 
+} 
+
+</script> 
+</body>
+</html>
